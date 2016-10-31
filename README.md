@@ -5,5 +5,11 @@ Config.json file has only one parameter that application listens port, it can be
 
 Shortly, this is a "Hello word" web api
 
+To start open cmd and type 
+go get -u github.com/msadikkose/webapi-template
+
+
+
+
 
 
