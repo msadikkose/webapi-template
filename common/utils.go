@@ -10,7 +10,7 @@ type configuration struct {
 	Port string
 }
 
-//AppConfig configuration for the redis
+//AppConfig configuration 
 var AppConfig configuration
 
 //InitConfig initialize the config
