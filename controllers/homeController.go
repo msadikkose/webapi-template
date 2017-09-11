@@ -1,18 +1,20 @@
 package controllers
 
 import (
-	"webapi-template/managers"
-
 	"github.com/kataras/iris"
+	"github.com/msadikkose/webapi-template/managers"
 )
 
 //GetDateTimeNow is returns Datetime.Now as JSON
-func GetDateTimeNow(c *iris.Context) {
-	c.JSON(iris.StatusOK, managers.GetDateTimeNow())
-}
+func GetDateTimeNow(c iris.Context) {
+	c.JSON(managers.GetDateTimeNow())
+	}
 
 //SayHello is returns greating
-func SayHello(c *iris.Context) {
-	name := c.Param("name")
-	c.JSON(iris.StatusOK, managers.SayHello(name))
+func SayHello(c iris.Context) {
+
+	name := c.Params().Get("name")
+	c.JSON(managers.SayHello(name))
+
 }
+

@@ -1,15 +1,18 @@
 package main
 
 import (
-	"webapi-template/common"
-	"webapi-template/routers"
 
 	"github.com/kataras/iris"
+	"github.com/msadikkose/webapi-template/common"
+	"github.com/msadikkose/webapi-template/routers"
 )
 
 func main() {
+
 	common.InitConfig()
-	api := iris.New()
-	routers.SetHomeRoute(api)
-	api.Listen(common.AppConfig.Port)
+	app := iris.New()
+	routers.SetHomeRoute(app)
+
+
+	app.Run(iris.Addr(common.AppConfig.Port))
 }
